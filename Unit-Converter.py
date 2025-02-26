@@ -125,7 +125,7 @@ def add_to_history(category, from_val, from_unit, to_val, to_unit):
         st.session_state.conversion_history = st.session_state.conversion_history[:10]
 
 # App header
-st.markdown('<div class="header-text">📊 Enhanced Unit Converter</div>', unsafe_allow_html=True)
+st.markdown('<div class="header-text">📊Unit Converter</div>', unsafe_allow_html=True)
 
 # Category selection buttons
 st.write("Select Category:")
@@ -175,7 +175,7 @@ with col2:
         result = base_value / UNITS[category]["conversions"][to_unit]
 
 # Results display
-st.markdown("<div class='result-container'>", unsafe_allow_html=True)
+st.markdown("<div class='result-container'><h2>Results</h2>", unsafe_allow_html=True)
 st.markdown(f"<h1 style='font-size: 2rem;'>{input_value} {from_unit} = {result:.6g} {to_unit}</h1>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
 
